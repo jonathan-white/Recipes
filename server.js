@@ -61,6 +61,16 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get("/assets/style.css", function(req, res) {
+  res.sendFile(path.join(__dirname, "/assets/css/style.css"));
+});
+
+app.get("/assets/script.js", function(req, res) {
+  res.sendFile(path.join(__dirname, "/assets/js/script.js"));
+});
+
+
+
 // Displays all recipes
 app.get("/recipes", function(req, res) {
   return res.json(recipes);
