@@ -6,7 +6,7 @@ var path = require("path");
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 6700;
+// const PORT = process.env.PORT || 6700;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
