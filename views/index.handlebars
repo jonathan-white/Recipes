@@ -1,0 +1,77 @@
+<div id="overlay" class="overlay">
+	<!-- Start Carousel -->
+	<div id="hero-vid" class="carousel slide" data-ride="carousel">
+	  <div class="carousel-inner">
+	  	{{#each videos}}
+	    <div class="carousel-item">
+	    	<video preload="auto" autoplay loop poster="{{img_url}}">
+	    		<source src="{{vid_url}}" type="{{vid_type}}">
+	    		Your browser does not support the video tag
+	    	</video>
+	    </div>
+	    {{/each}}
+	  </div>
+	</div>
+	<!-- End Carousel -->
+</div>
+
+{{!-- Add New Recipe Form --}}
+
+{{!-- Display Recipes --}}
+<div class="main-content">
+	<div class="container">
+		<div align="center" class="row">
+			<h1>Enter a Recipe:</h1>
+		</div>
+		<div align="center" class="row">
+			<form id="entry-form" action="/" method="POST">
+				<div class="form-group">
+					<label for="title">Recipe Name</label>
+					<input type="text" class="form-control" id="title" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="title">Description</label>
+					<input type="text" class="form-control" id="title" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="title">Image Link</label>
+					<input type="text" class="form-control" id="title" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="title">Ingredients</label>
+					<input type="text" class="form-control" id="title" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="title">Instructions</label>
+					<input type="text" class="form-control" id="title" placeholder="">
+				</div>
+			</form>
+		</div>
+		<div class="row">
+			<h2 class="section-header mx-auto mt-4">Select a Recipe</h2>
+		</div>
+		<div class="row d-flex justify-content-around my-3">
+			{{#each recipes}}
+			{{!-- <a href="/api/recipe/1" class="btn btn-primary"> --}}
+				<div class="card m-3" style="width: 18rem;">
+				  <img class="card-img-top" src="{{img_url}}" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title">{{recipe_name}}</h5>
+				    <p class="card-text">{{description}}</p>
+				    <a href="/api/recipe/1" class="btn btn-primary">Show Recipe</a>
+				  </div>
+				</div>
+			{{!-- </a> --}}
+			{{/each}}
+		</div>	
+	</div>
+	
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="/assets/js/script.js"></script>
+<script>
+	$(".carousel-item").eq(0).addClass('active');
+</script>

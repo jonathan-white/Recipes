@@ -1,0 +1,11 @@
+
+<div class="container">
+	{{#each recipes}}
+	<div>
+		<a href="/api/recipe/{{id}}">
+			<h2>{{recipe_name}}</h2>
+			<p>{{description}}</p>
+		</a>
+	</div>
+	{{/each}}
+</div>

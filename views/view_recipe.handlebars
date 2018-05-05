@@ -1,0 +1,55 @@
+<style>
+	h1{
+		color: rgba(0, 183, 36, 1);
+	}
+
+	h5 {
+		color: rgba(102, 51, 0, 1);
+	}
+
+	.disp-list {
+		padding: 20px;
+	    background-color: #eee;
+	    margin-bottom: 20px;
+	    border-radius: 10px;
+	    border: 1px solid #ccc;
+	}
+	.ingredients li:hover {
+		color: rgba(255, 153, 0, 1);
+		cursor: pointer;
+	}
+
+	.recipe-img {
+		margin-top: 25px;
+		/*border-radius: 20px;*/
+		border: 1px solid #000;
+	}
+</style>
+
+<div class="container">
+	<div class="row">
+		<div class="col-4">
+			<img class="recipe-img" src="{{img_url}}" alt="{{recipe_name}}">
+		</div>
+		<div class="col-8">
+			<h1>{{recipe_name}}</h1>
+			<h4>{{description}}</h4>
+			<div class="disp-list ingredients">
+				<h5><strong>Ingredients:</strong></h5>
+				<ul>
+					{{#each ingredients}}
+					<li>{{name}} ({{qty}})</li>
+					{{/each}}
+				</ul>
+			</div>
+			<div class="disp-list instructions">
+				<h5><strong>Instructions:</strong></h5>
+				<ol>
+					{{#each instructions}}
+					<li>{{action}}</li>
+					{{/each}}
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>

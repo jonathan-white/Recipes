@@ -5,14 +5,19 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.13.4"
+    "dotenv": "^5.0.1",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "mysql": "^2.10.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
-  "author": "",
+  "author": "Jon White",
   "license": "ISC"
 }
