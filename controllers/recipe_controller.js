@@ -11,8 +11,8 @@ var path = require("path");
 router.get("/", function(req, res) {
 	recipe.all(function(data){
 
-		res.redirect("/index.html"); // Temporarily redirect to 404 page
-		// res.render("index", {recipes: data, videos: video});
+		// res.redirect("/index.html"); // Temporarily redirect to 404 page
+		res.render("index", {recipes: data, videos: video});
 	});
 });
 
